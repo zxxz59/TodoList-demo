@@ -1,14 +1,14 @@
 <script setup>
-import TodoHeader from './components/TodoHeader.vue'
-import TodoMain from './components/TodoMain.vue'
-import TodoFooter from './components/TodoFooter.vue'
+import TodoTop from './components/TodoTop.vue'
+import TodoMiddle from './components/TodoMiddle.vue'
+import TodoBottom from './components/TodoBottom.vue'
 </script>
 
 <template>
   <section class="todoBox">
-    <TodoHeader></TodoHeader>
-    <TodoMain></TodoMain>
-    <TodoFooter></TodoFooter>
+    <TodoTop></TodoTop>
+    <TodoMiddle></TodoMiddle>
+    <TodoBottom></TodoBottom>
   </section>
 </template>
 
@@ -32,7 +32,7 @@ input[type=checkbox] {
   border-radius: 50%;
   visibility: hidden
 }
-  
+
 input[type=checkbox]:after {
   position: absolute;
   width: 35px;
@@ -44,7 +44,7 @@ input[type=checkbox]:after {
   visibility: visible;
   padding: 0px 2px;
   border-radius: 50%;
-  background:#c26e89;
+  background: #c26e89;
   background: linear-gradient(to bottom right, #FF7265, #5666cb);
   border: 1px solid #c26e89;
 }

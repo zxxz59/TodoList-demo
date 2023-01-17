@@ -8,9 +8,12 @@ const useTodoStore = defineStore('todos', {
     state () {
         return {
             list: [
-                { id: 1, name: '吃饭', done: true },
-                { id: 2, name: '睡觉', done: false },
-                { id: 3, name: '打豆豆', done: true },
+                { id: 1, name: '使用说明', done: false },
+                { id: 2, name: '1.顶部选择按钮全选反选', done: false },
+                { id: 3, name: '2.点击左侧选择按钮选择已完成项', done: false },
+                { id: 4, name: '3.底部按钮全部-未完成-已完成-清除所有完成项', done: false },
+                { id: 5, name: '4.已完成效果', done: true },
+                { id: 6, name: 'have a good time', done: false }
             ],
             activeBtn: 'all'
         }
@@ -19,8 +22,8 @@ const useTodoStore = defineStore('todos', {
         isCheckAll () {
             return this.list.every(item => item.done)
         },
-        left () {
-            return this.list.filter(item => !item.done).length
+        itemShow () {
+            return this.listShow.length
         },
         listShow () {
             switch (this.activeBtn) {

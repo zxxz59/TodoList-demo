@@ -22,6 +22,26 @@ const { listShow } = storeToRefs(todos)
 </template>
 
 <style  scoped>
+.main {
+  min-height: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.main::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom right, #FF7265, #5666cb);
+  border-radius: 5px;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #f40;
+}
+
 .todo-list>li {
   display: flex;
   height: 50px;
@@ -44,10 +64,13 @@ const { listShow } = storeToRefs(todos)
   line-height: 50px;
   font-size: 24px;
   color: antiquewhite;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .cross {
-  color:rgba(250, 250, 250, 0.2);
+  color: rgba(250, 250, 250, 0.2);
   text-decoration: line-through;
 }
 
@@ -57,7 +80,7 @@ const { listShow } = storeToRefs(todos)
   border-radius: 50%;
   background: linear-gradient(to bottom right, #FF7265, #5666cb);
   font-size: 30px;
-  color:antiquewhite;
+  color: antiquewhite;
   text-align: center;
   line-height: 25px;
 }
