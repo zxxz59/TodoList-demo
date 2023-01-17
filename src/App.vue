@@ -15,7 +15,7 @@ import TodoBottom from './components/TodoBottom.vue'
 <style>
 .todoBox {
   width: 666px;
-  height: 333px;
+  /* height: 333px; */
   background: linear-gradient(to bottom right, #5666cb, #FF7265);
   margin: 50px auto 0;
   border-radius: 10px;
